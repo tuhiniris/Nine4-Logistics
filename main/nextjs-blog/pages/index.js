@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Nine4 Logistics - Home</title>
+        <title>Nine4 Logistics - Kolkata's First E-Commerce Friendly Shipping Company
+        </title>
         <link rel="icon" href="/nine4-logo.png" />
       </Head>
 
@@ -56,7 +57,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by React{' '}
+         Powered by React{' '}
           <img src="/react-logo.svg" alt="React" className="logo" />
         </a>
       </footer>
@@ -70,6 +71,7 @@ export default function Home() {
           justify-content: center;
           align-items: center;  
         }
+        
         
 
         main {
@@ -90,12 +92,13 @@ export default function Home() {
           justify-content: center;
           align-items: center;
           color : white;
-          transition: 0.3s;
+          transition: 0.2s;
         }
 
         footer:hover {
           background-color: #4267B2;
           color : white;
+          font-weight: bold;
         }
 
         footer img {
@@ -212,6 +215,9 @@ export default function Home() {
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
             sans-serif;
+            scrollbar-width: thin;          /* "auto" or "thin" */
+            scrollbar-color: blue orange;   /* scroll thumb and track */
+
             
         }
 
