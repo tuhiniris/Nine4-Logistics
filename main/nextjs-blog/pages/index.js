@@ -44,7 +44,7 @@ export default function Home() {
           >
             <h3>Contact Us &rarr;</h3>
             <p>
-              Email & Phone Support Available
+              Email & Phone Support Available <b>24x7</b>
             </p>
           </a>
         </div>
@@ -68,8 +68,9 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
+          align-items: center;  
         }
+        
 
         main {
           padding: 5rem 0;
@@ -177,6 +178,7 @@ export default function Home() {
         .card:active {
           color: #0070f3;
           border-color: #0070f3;
+          background-color:white;
         }
 
         .card h3 {
