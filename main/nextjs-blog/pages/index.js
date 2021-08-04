@@ -5,10 +5,12 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Nine4 Logistics - Home</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/nine4-logo.png" />
       </Head>
 
       <main>
+
+        
         <h1 className="title">
           Nine4 <a href="https://github.com/tuhiniris/Nine4-Logistics">Logistics</a>
         </h1>
@@ -19,30 +21,30 @@ export default function Home() {
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <h3>Quick Shipping  &rarr;</h3>
+            <p>For low & medium weight personal consignments</p>
           </a>
 
           <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <h3>Commercial &rarr;</h3>
+            <p>For online startups, regular orders and more</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className="card"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h3>Shop Local &rarr;</h3>
+            <p>We will support your local business <b>soon</b>!</p>
           </a>
 
           <a
             href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className="card"
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>Contact Us &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Email & Phone Support Available
             </p>
           </a>
         </div>
@@ -62,7 +64,7 @@ export default function Home() {
       <style jsx>{`
         .container {
           min-height: 100vh;
-          padding: 0 0.5rem;
+          /* padding: 0 0.5rem; */
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -83,8 +85,16 @@ export default function Home() {
           height: 100px;
           border-top: 1px solid #eaeaea;
           display: flex;
+          background-color: black;
           justify-content: center;
           align-items: center;
+          color : white;
+          transition: 0.3s;
+        }
+
+        footer:hover {
+          background-color: #4267B2;
+          color : white;
         }
 
         footer img {
@@ -105,12 +115,14 @@ export default function Home() {
         .title a {
           color: #0070f3;
           text-decoration: none;
+          transition: 0.5s;
         }
 
         .title a:hover,
         .title a:focus,
         .title a:active {
-          text-decoration: underline;
+         // text-decoration: underline;
+          color : #4267B2;  
         }
 
         .title {
@@ -204,6 +216,10 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+        
+        
+
+
       `}</style>
     </div>
   )
