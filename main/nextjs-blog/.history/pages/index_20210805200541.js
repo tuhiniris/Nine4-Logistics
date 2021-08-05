@@ -36,25 +36,25 @@ export default function Home() {
         <code>Bringing hopes and good news to your doorstep</code>
         </p>
 
-        <div className="grid"> 
-                 
+        <div className="grid">
           <a className="card">
-            <Link href = "/tryindex"><h3>Quick Shipping  &rarr;</h3></Link>
+            <Link href = "/tryindex"><a><h3>Quick Shipping  &rarr;</h3></a></Link>
             <p>For low & medium weight personal consignments</p>
           </a>
 
           <a className="card">
-            <Link href = "/tryindex"><h3>Commercial  &rarr;</h3></Link>
+            <Link href = "/tryindex"><a><h3>Commercial  &rarr;</h3></a></Link>
             <p>For online startups, regular orders and more</p>
           </a>
 
           <a className="card">          
-            <Link href = "/tryindex"><h3>Shop Local  &rarr;</h3></Link>
+            <Link href = "/tryindex"><a><h3>Shop Local  &rarr;</h3></a></Link>
             <p>We will support your local business <b>soon</b>!</p>
           </a>
 
           <a className="card">          
-            <Link href = "/tryindex"><h3>Contact Us  &rarr;</h3></Link>
+            <h3>Contact Us &rarr;</h3>
+            <Link href = "/tryindex"><a><h3>Contact Us  &rarr;</h3></a></Link>
             <p>Email & Phone Support Available <b>24x7</b></p>
           </a>
         </div>
