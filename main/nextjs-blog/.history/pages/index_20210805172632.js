@@ -7,7 +7,7 @@ export default function Home() {
     <div className="container">
 
 <NextNprogress
-  color="orange"
+  color="#29D"
   startPosition={0.3}
   stopDelayMs={200}
   height={3}

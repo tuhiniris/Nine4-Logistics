@@ -41,13 +41,11 @@ export default (req, res) => {
   if (req.method === 'POST') {
     // signup
     try {
-      assert.notEqual('', req.body.email, 'Email required');
-      assert.notEqual('', req.body.password, 'Password required');
-
+      assert.notEqual(null, req.body.email, 'Email required');
+      assert.notEqual(null, req.body.password, 'Password required');
     } catch (bodyError) {
-      return res.status(403).json({error: true, message: bodyError.message});
+      res.status(403).json({error: true, message: bodyError.message});
     }
-
 
     // verify email does not exist already
     client.connect(function(err) {
