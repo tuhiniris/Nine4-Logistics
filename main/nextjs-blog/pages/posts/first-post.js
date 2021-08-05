@@ -1,70 +1,42 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import NextNprogress from 'nextjs-progressbar';
+import Head from 'next/head'
 
-export default function Home() {
+export default function FirstPost() {
   return (
-    <div className="container">
-
-<NextNprogress
-  color="#29D"
-  startPosition={0.3}
-  stopDelayMs={200}
-  height={3}
-  showOnShallow={true}
-  showSpinner = {false}
-  options={{ easing: 'ease', speed: 500, showSpinner: true }}
-/>
-
+    <div className = "container">
       <Head>
         <title>Nine4 Logistics - Kolkata's First E-Commerce Friendly Shipping Company
         </title>
         <link rel="icon" href="/nine4-logo.png" />
       </Head>
-
-      <main>
-
-        
+<main>
+      <description>        
         <h1 className="title">
-          Nine4 <Link href = "/posts/first-post"><a>Logistics</a></Link>
+        Connecting <a>Kolkata</a>
         </h1>
+        
 
         <p className="description">
-        <code>Bringing hopes and good news to your doorstep</code>
+        <code><Link href = "/"><a>Book your Shipment</a></Link></code>
+        
         </p>
+        <firstpostcx><center>More Regions Unlocking Soon</center></firstpostcx>
+      </description>
 
-        <div className="grid">
+      <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
-            <h3>Quick Shipping  &rarr;</h3>
+            <h3>{'< '}24Hr Delivery  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a>
+          <a href="https://nextjs.org/docs" className="card">
+            <h3>Safe & Reliable  &rarr;</h3>
+            <p>For low & medium weight personal consignments</p>
+          </a> 
+        
+    </div>
+</main>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Commercial &rarr;</h3>
-            <p>For online startups, regular orders and more</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Shop Local &rarr;</h3>
-            <p>We will support your local business <b>soon</b>!</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Contact Us &rarr;</h3>
-            <p>
-              Email & Phone Support Available <b>24x7</b>
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
+    <footer>
         <a
           href="https://reactjs.org/"
           target="_blank"
@@ -74,6 +46,13 @@ export default function Home() {
           <img src="/react-logo.svg" alt="React" className="logo" />
         </a>
       </footer>
+
+
+
+
+
+
+
 
       <style jsx>{`
         .container {
@@ -85,7 +64,19 @@ export default function Home() {
           align-items: center;  
         }
         
-        
+        firstpostcx{
+          
+            color : lightgrey;
+            text-decoration: none;
+            transition: 0.3s;
+            //padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;        
+            
+        }
 
         main {
           padding: 5rem 0;
@@ -159,12 +150,20 @@ export default function Home() {
         }
 
         code {
-          background: #fafafa;
+          background: #0095ff;
+          color:white;
           border-radius: 5px;
-          padding: 0.75rem;
+          transition: 0.5s;
+          padding: 0.90rem;
+          margin-top : 2px;
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        code:hover{
+            color : black;
+            background : yellow;
         }
 
         .grid {
@@ -242,6 +241,7 @@ export default function Home() {
 
 
       `}</style>
+
     </div>
   )
 }
