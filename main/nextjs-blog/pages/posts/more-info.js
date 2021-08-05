@@ -12,7 +12,7 @@ export default function FirstPost() {
 <main>
       <description>        
         <h1 className="title">
-        Connecting <a>Kolkata</a>
+        Kolkata is <a>Live !!</a>
         </h1>
         
 
@@ -231,7 +231,13 @@ export default function FirstPost() {
             sans-serif;
             scrollbar-width: thin;          /* "auto" or "thin" */
             scrollbar-color: blue orange;   /* scroll thumb and track */
-
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+             -khtml-user-select: none; /* Konqueror HTML */
+               -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently
+                                          supported by Chrome, Edge, Opera and Firefox */
             
         }
 

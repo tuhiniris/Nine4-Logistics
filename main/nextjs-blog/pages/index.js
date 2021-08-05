@@ -33,7 +33,7 @@ export default function Home() {
         </h1>
 
         <p className="description">
-        <code>Bringing hopes and good news to your doorstep</code>
+        <code className="noselect">Bringing hopes and good news to your doorstep</code>
         </p>
 
         <div className="grid"> 
@@ -81,6 +81,15 @@ export default function Home() {
           align-items: center;  
         }
         
+        .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
         
 
         main {
@@ -227,6 +236,15 @@ export default function Home() {
             sans-serif;
             scrollbar-width: thin;          /* "auto" or "thin" */
             scrollbar-color: blue orange;   /* scroll thumb and track */
+            
+              -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                 -khtml-user-select: none; /* Konqueror HTML */
+                   -moz-user-select: none; /* Old versions of Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently
+                                              supported by Chrome, Edge, Opera and Firefox */
+            
 
             
         }

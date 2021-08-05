@@ -3,8 +3,6 @@ import fetch from 'isomorphic-unfetch';
 import useSWR from 'swr';
 import Link from 'next/link';
 import cookie from 'js-cookie';
-import React, {useState} from 'react';
-import Router from 'next/router';
 
 function Home() {
   const {data, revalidate} = useSWR('/api/me', async function(args) {
@@ -25,24 +23,16 @@ function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <main>
-      
+      <h1 className="title">Login &rarr; <Link href = "/posts/more-info"><a>Step 2</a></Link>
+        </h1>
 
                
 
 
       {loggedIn && (
         <>
-
-        <h1 className="title">Already <Link href = "/posts/more-info"><a>Signed In</a></Link>
-        </h1>
-          <p className="description">You are signed in as &rarr; {data.email}!</p>
-
-
-          <p className="description">
-        <code><Link href = "/"><a>Next Step</a></Link></code></p>
-
-
-          <button className="button" styleName="vertical-align:middle"
+          <p>Welcome {data.email}!</p>
+          <button
             onClick={() => {
               cookie.remove('token');
               revalidate();
@@ -50,12 +40,10 @@ function Home() {
             Logout
           </button>
         </>
-
       )}
       {!loggedIn && (
         <>
-<h1 className="title">Step &rarr;<Link href = "/posts/more-info"><a> 1</a></Link>
-        </h1>
+
 <div className="grid"> 
                  
                  <a className="card-priority">
@@ -113,25 +101,6 @@ function Home() {
           justify-content: center;
           align-items: center;
         }
-
-        .button {
-  background-color: lightgrey; /* Green */
-  border: none;
-  color: white;
-  padding: 7px 78px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-}
-
-        .button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  color:black;
-}
 
         footer {
           width: 100%;
@@ -196,22 +165,12 @@ function Home() {
         }
 
         code {
-          background: #0095ff;
-          color:white;
+          background: #fafafa;
           border-radius: 5px;
-          transition: 0.2s;
-          padding: 0.90rem;
-          margin-top : 2px;
-          padding-left : 50px;
-          padding-right : 50px;
+          padding: 0.75rem;
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        code:hover{
-            color : black;
-            background : yellow;
         }
 
         .grid {
