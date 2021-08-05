@@ -24,11 +24,11 @@ export default function FirstPost() {
       </description>
 
       <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
+          <a href="#" className="card">
             <h3>{'< '}24Hr Delivery  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a>
-          <a href="https://nextjs.org/docs" className="card">
+          <a href="#" className="card">
             <h3>Safe & Reliable  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a> 

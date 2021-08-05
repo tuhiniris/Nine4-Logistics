@@ -26,7 +26,7 @@ export default function Home() {
 
         
         <h1 className="title">
-          Nine4 <Link href = "/posts/first-post"><a>Logistics</a></Link>
+          Nine4 <Link href = "/posts/more-info"><a>Logistics</a></Link>
         </h1>
 
         <p className="description">
@@ -34,18 +34,18 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
+          <a href="#" className="card">
             <h3>Quick Shipping  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
+          <a href="#" className="card">
             <h3>Commercial &rarr;</h3>
             <p>For online startups, regular orders and more</p>
           </a>
 
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
+            href="#"
             className="card"
           >
             <h3>Shop Local &rarr;</h3>
@@ -53,7 +53,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="#"
             className="card"
           >
             <h3>Contact Us &rarr;</h3>
