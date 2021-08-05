@@ -185,7 +185,8 @@ export default function FirstPost() {
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
+          transition: color 0.35s ease, border-color 0.35s ease;
+          
         }
 
         .card:hover,
@@ -194,6 +195,7 @@ export default function FirstPost() {
           color: #0070f3;
           border-color: #0070f3;
           background-color:white;
+          
         }
 
         .card h3 {
