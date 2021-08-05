@@ -53,7 +53,7 @@ export default function Home() {
           </a>
 
           <a className="card">          
-            <Link href = "/tryindex"><a><h3>Contact Us  &rarr;</h3></a></Link>
+            <h3>Contact Us &rarr;</h3>
             <p>Email & Phone Support Available <b>24x7</b></p>
           </a>
         </div>

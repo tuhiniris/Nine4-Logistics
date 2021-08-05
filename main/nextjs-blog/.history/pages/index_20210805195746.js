@@ -37,24 +37,34 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <a className="card">
-            <Link href = "/tryindex"><a><h3>Quick Shipping  &rarr;</h3></a></Link>
+          <card>
+          <a href="/tryindex">
+            <h3>Quick Shipping  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a>
+          </card>
 
-          <a className="card">
-            <Link href = "/tryindex"><a><h3>Commercial  &rarr;</h3></a></Link>
+          <a href="#" className="card">
+            <h3>Commercial &rarr;</h3>
             <p>For online startups, regular orders and more</p>
           </a>
 
-          <a className="card">          
-            <Link href = "/tryindex"><a><h3>Shop Local  &rarr;</h3></a></Link>
+          <a
+            href="#"
+            className="card"
+          >
+            <h3>Shop Local &rarr;</h3>
             <p>We will support your local business <b>soon</b>!</p>
           </a>
 
-          <a className="card">          
-            <Link href = "/tryindex"><a><h3>Contact Us  &rarr;</h3></a></Link>
-            <p>Email & Phone Support Available <b>24x7</b></p>
+          <a
+            href="#"
+            className="card"
+          >
+            <h3>Contact Us &rarr;</h3>
+            <p>
+              Email & Phone Support Available <b>24x7</b>
+            </p>
           </a>
         </div>
       </main>

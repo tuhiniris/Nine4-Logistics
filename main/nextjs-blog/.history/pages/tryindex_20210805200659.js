@@ -20,7 +20,9 @@ function Home() {
         <title>Nine4 Logistics - Book Your Consignment</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <h1>Order Section</h1>
+      <h1>Simplest login</h1>
+
+      <h2>Proudly using Next.js, Mongodb and deployed with Now</h2>
       {loggedIn && (
         <>
           <p>Welcome {data.email}!</p>
