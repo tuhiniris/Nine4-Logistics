@@ -62,6 +62,11 @@ const Signup = () => {
       <input type="submit" value="Submit" />
       {signupError && <p style={{color: 'red'}}>{signupError}</p>}
     </form>
+
+
+
+
+
   );
 };
 
