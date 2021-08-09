@@ -11,7 +11,7 @@ function Home() {
     const res = await fetch(args);
     return res.json();
   });
-  if (!data) return <h1>Loading...</h1>;
+  if (!data) return <h1></h1>;
   let loggedIn = false;
   if (data.email) {
     loggedIn = true;
