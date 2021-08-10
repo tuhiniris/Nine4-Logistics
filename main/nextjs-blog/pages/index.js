@@ -78,7 +78,9 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;  
+          align-items: center;     
+         // background-image: url("/bg-img.jpg");   
+         // background-size: 1366px 768px;             
         }
         
         .noselect {
@@ -111,6 +113,7 @@ export default function Home() {
           align-items: center;
           color : white;
           transition: 0.2s;
+          
         }
 
         footer:hover {

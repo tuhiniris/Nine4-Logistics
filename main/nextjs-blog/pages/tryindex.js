@@ -69,7 +69,7 @@ function Home() {
                  </a>
 
                  <a className="card">
-                   <Link href = "/signup"><h3>Privacy &rarr;</h3></Link>
+                   <Link href = "#"><h3>Privacy &rarr;</h3></Link>
                    <p>For new visitors</p>
                  </a>
 
