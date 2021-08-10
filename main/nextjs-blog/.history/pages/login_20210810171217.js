@@ -5,16 +5,17 @@ import Head from 'next/head'
 import Link from 'next/link'
 import NextNprogress from 'nextjs-progressbar';
 import fetch from 'isomorphic-unfetch';
+import useSWR from 'swr';
 
-const Signup = () => {
-  const [signupError, setSignupError] = useState('');
+const Login = () => {
+  const [loginError, setLoginError] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch('/api/users', {
+    //call api
+    fetch('/api/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -24,88 +25,86 @@ const Signup = () => {
         password,
       }),
     })
-      .then((r) => r.json())
+      .then((r) => {
+        return r.json();
+      })
       .then((data) => {
         if (data && data.error) {
-          setSignupError(data.message);
+          setLoginError(data.message);
         }
         if (data && data.token) {
           //set cookie
           cookie.set('token', data.token, {expires: 2});
-          Router.push('/');
+          Router.push('/posts/quickstep');
         }
       });
   }
+
+
+
   return (
+    
 
     <div className="container">
       
       
-    <NextNprogress
-color="orange"
-startPosition={0.3}
-stopDelayMs={200}
-height={3}
-showOnShallow={true}
-showSpinner = {false}
-options={{ easing: 'ease', speed: 500, showSpinner: true }}
+      <NextNprogress
+  color="orange"
+  startPosition={0.3}
+  stopDelayMs={200}
+  height={3}
+  showOnShallow={true}
+  showSpinner = {false}
+  options={{ easing: 'ease', speed: 500, showSpinner: true }}
 />
-  
+      
+      
+      
+      
+      
+      <Head>
+      <title>Nine4 Logistics - Sign In
+      </title>
+      <link rel="icon" href="/nine4-logo.png" />
+    </Head>
     
-    <Head>
-    <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"></link>
-    <title>Nine4 Logistics - Sign Up
-    </title>
-    <link rel="icon" href="/nine4-logo.png" />
-  </Head>
+    <main>
 
-
-<main>
-
-
-  <h1 className="title">
+   
+ <h1 className="title">
           Nine4 <Link href = "/"><a>Logistics</a></Link>
           
-        </h1>
+          </h1>
         <p>
-        <code className="noselect">Register Now | <Link href = "/login"><a2>Login Now</a2></Link></code>
+        <code className="noselect">New User ? | <Link href = "/signup"><a2>Register Here</a2></Link></code>
         </p><br></br><br></br>
 
 
     <form onSubmit={handleSubmit} className="myform2">
-      
-      <label htmlFor="email">
-        
+    
+    
         <input
-          value={email}
-          placeholder = "Email-ID"
-          onChange={(e) => setEmail(e.target.value)}
           name="email"
           type="email"
-        />
-      </label>     
+          value={email}
+          placeholder = "Email-ID"
+          onChange={(e) => setEmail(e.target.value)} />
 
-      <label for="password">
-        
+
+
         <input
-          value={password}
-          placeholder = "Password"
-          onChange={(e) => setPassword(e.target.value)}
           name="password"
           type="password"
-        />
-      </label>
+          value={password}
+          placeholder = "Password"
+          onChange={(e) => setPassword(e.target.value)} />
+        <input type="submit" value="Submit" />
+        {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
 
-      <br />
+      </form>
+      </main>
 
-      <input type="submit" value="Submit" />
-      {signupError && <p style={{color: 'red'}}>{signupError}</p>}
-    </form>
-    </main>
-
-    <footer>
+      <footer>
           <a
             href="https://reactjs.org/"
             target="_blank"
@@ -121,7 +120,10 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
       <style jsx>{`
         
         
-        
+        .myform2{
+          font-family: monospace;
+          padding-left: 5px;
+        }
         
         
         .container {
@@ -130,15 +132,20 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;  
+          align-items: center; 
+           
 
 
-          background:linear-gradient(0deg, rgba(255, 0, 0, 0.3), rgba(89, 0, 255, 0.3)), url("https://images.pexels.com/photos/66284/winter-nature-season-trees-66284.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-66284.jpg&fit=crop&fm=jpg&h=1317&w=1920");
+          background:linear-gradient(0deg, rgba(155, 100, 100, 0.3), rgba(189, 100, 255, 0.3)), url("https://images.pexels.com/photos/66284/winter-nature-season-trees-66284.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-66284.jpg&fit=crop&fm=jpg&h=1317&w=1920");
           
           background-size: 1920px 1080px;
           background-blend-mode:soft-light;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
 
+        .container:hover{
+          transition: 0.8s;
+          background-blend-mode:darken;
         }
 
 
@@ -163,14 +170,10 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
           align-items: center;
         }
 
-        .myform2{
-          font-family: monospace;
-          padding-left: 5px;
-        }
-
-        nand{
-          color:white;
-          margin-right: 5px;
+        a2:hover{
+          transition: 0.3s;
+          color: red;
+          background: white;
         }
 
         footer {
@@ -204,12 +207,6 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        a2:hover{
-          transition: 0.3s;
-          color: red;
-          background: white;
         }
 
         .title a {
@@ -341,15 +338,13 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
 
 
       `}</style>
-
-
-
-</div>
-
-
-
-
+      </div>
   );
+
+
+
+
+  
 };
 
-export default Signup;
+export default Login;

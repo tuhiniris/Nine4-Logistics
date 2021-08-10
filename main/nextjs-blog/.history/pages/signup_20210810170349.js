@@ -70,7 +70,7 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
           
         </h1>
         <p>
-        <code className="noselect">Register Now | <Link href = "/login"><a2>Login Now</a2></Link></code>
+        <code className="noselect">Register Now | <Link href = "/"><a2>Reset Password</a2></Link></code>
         </p><br></br><br></br>
 
 
@@ -133,7 +133,7 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
           align-items: center;  
 
 
-          background:linear-gradient(0deg, rgba(255, 0, 0, 0.3), rgba(89, 0, 255, 0.3)), url("https://images.pexels.com/photos/66284/winter-nature-season-trees-66284.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-66284.jpg&fit=crop&fm=jpg&h=1317&w=1920");
+          background:linear-gradient(0deg, rgba(255, 0, 0, 0.3), rgba(89, 0, 255, 0.3)), url("https://images.pexels.com/photos/2529973/pexels-photo-2529973.jpeg?crop=entropy&cs=srgb&dl=pexels-trace-hudson-2529973.jpg&fit=crop&fm=jpg&h=1536&w=1920");
           
           background-size: 1920px 1080px;
           background-blend-mode:soft-light;
