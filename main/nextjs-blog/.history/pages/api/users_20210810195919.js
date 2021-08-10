@@ -62,10 +62,10 @@ export default (req, res) => {
         }
         
         if (!user) {
-          
+          try{
           // proceed to Create
           createUser(db, email, password, function(creationResult) {
-            try{
+
             if (creationResult.ops.length === 1) {
               const user = creationResult.ops[0];
               const token = jwt.sign(
@@ -78,14 +78,12 @@ export default (req, res) => {
               res.status(200).json({token});
               return;
             }
-          }
-          catch(err){
-            res.status(403).json({error: true, message: 'Successfully Registered'});
-            ;
-          }
-        } 
-          );        
-      }      
+          });
+        }
+      }
+      catch(err){
+        ;
+      }
         
         else {
           // User exists

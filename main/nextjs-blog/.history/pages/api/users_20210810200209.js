@@ -80,7 +80,6 @@ export default (req, res) => {
             }
           }
           catch(err){
-            res.status(403).json({error: true, message: 'Successfully Registered'});
             ;
           }
         } 

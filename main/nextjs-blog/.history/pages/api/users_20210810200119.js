@@ -79,13 +79,15 @@ export default (req, res) => {
               return;
             }
           }
-          catch(err){
-            res.status(403).json({error: true, message: 'Successfully Registered'});
-            ;
-          }
         } 
-          );        
-      }      
+          );
+        
+        catch(err){
+          ;
+        }
+      }
+
+      
         
         else {
           // User exists

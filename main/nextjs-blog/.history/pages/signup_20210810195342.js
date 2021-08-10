@@ -13,7 +13,6 @@ const Signup = () => {
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
   function handleSubmit(e) {
-    try{
     e.preventDefault();
     fetch('/api/users', {
       method: 'POST',
@@ -37,11 +36,8 @@ const Signup = () => {
         }
       });
   }
-  catch(err){
-    console.log("Saved With Some Errors");
-  }
-}
   return (
+    try{
 
     <div className="container">
       
@@ -350,7 +346,10 @@ options={{ easing: 'ease', speed: 500, showSpinner: true }}
 
 
 </div>
-
+      }
+      catch(err){
+        ;
+      }
 
 
 
