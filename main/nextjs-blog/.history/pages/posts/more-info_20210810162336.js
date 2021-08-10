@@ -1,68 +1,44 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import Head from 'next/head'
 import NextNprogress from 'nextjs-progressbar';
-import fetch from 'isomorphic-unfetch';
-import useSWR from 'swr';
-import cookie from 'js-cookie';
+import BottomNav from '../components/BottomNav'
 
-export default function Home() {
+export default function FirstPost() {
   return (
-
-    
-    <div className="container">
-
-<NextNprogress
-  color="orange"
-  startPosition={0.3}
-  stopDelayMs={200}
-  height={3}
-  showOnShallow={true}
-  showSpinner = {false}
-  options={{ easing: 'ease', speed: 500, showSpinner: true }}
-/>
-
+    <div className = "container">
       <Head>
         <title>Nine4 Logistics - Kolkata's First E-Commerce Friendly Shipping Company
         </title>
         <link rel="icon" href="/nine4-logo.png" />
       </Head>
-
-      <main>
-
-        
+<main>
+      <description>        
         <h1 className="title">
-          Nine4 <Link href = "/posts/more-info"><a>Logistics</a></Link>
+        Kolkata is <a>Live !!</a>
         </h1>
+        
 
         <p className="description">
-        <code className="noselect">Bringing hopes and good news to your doorstep</code>
+        <code><Link href = "/"><a>Book your Shipment</a></Link></code>
+        
         </p>
+        <firstpostcx><center>More Regions Unlocking Soon</center></firstpostcx>
+      </description>
 
-        <div className="grid"> 
-                 
-          <a className="card">
-            <Link href = "/tryindex"><h3>Quick Shipping  &rarr;</h3></Link>
+      <div className="grid">
+          <a href="#" className="card">
+            <h3>{'< '}24Hr Delivery  &rarr;</h3>
             <p>For low & medium weight personal consignments</p>
           </a>
+          <a href="#" className="card">
+            <h3>Safe & Reliable  &rarr;</h3>
+            <p>For low & medium weight personal consignments</p>
+          </a> 
+        
+    </div>
+</main>
 
-          <a className="card">
-            <Link href = "/tryindex"><h3>Commercial  &rarr;</h3></Link>
-            <p>For online startups, regular orders and more</p>
-          </a>
-
-          <a className="card">          
-            <Link href = "/tryindex"><h3>Shop Local  &rarr;</h3></Link>
-            <p>We will support your local business <b>soon</b>!</p>
-          </a>
-
-          <a className="card">          
-            <Link href = "/tryindex"><h3>Contact Us  &rarr;</h3></Link>
-            <p>Email & Phone Support Available <b>24x7</b></p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
+    <footer>
         <a
           href="https://reactjs.org/"
           target="_blank"
@@ -73,6 +49,16 @@ export default function Home() {
         </a>
       </footer>
 
+
+
+      <div>
+      Home
+      <BottomNav name='home' />
+    </div>
+
+
+
+
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -80,21 +66,22 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;     
-         // background-image: url("/bg-img.jpg");   
-         // background-size: 1366px 768px;             
+          align-items: center;  
         }
         
-        .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-        
+        firstpostcx{
+          
+            color : lightgrey;
+            text-decoration: none;
+            transition: 0.3s;
+            //padding: 5rem 0;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;        
+            
+        }
 
         main {
           padding: 5rem 0;
@@ -115,7 +102,6 @@ export default function Home() {
           align-items: center;
           color : white;
           transition: 0.2s;
-          
         }
 
         footer:hover {
@@ -169,12 +155,20 @@ export default function Home() {
         }
 
         code {
-          background: #fafafa;
+          background: #0095ff;
+          color:white;
           border-radius: 5px;
-          padding: 0.75rem;
+          transition: 0.5s;
+          padding: 0.90rem;
+          margin-top : 2px;
           font-size: 1.1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+        }
+
+        code:hover{
+            color : black;
+            background : yellow;
         }
 
         .grid {
@@ -197,6 +191,7 @@ export default function Home() {
           border: 1px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.35s ease, border-color 0.35s ease;
+          
         }
 
         .card:hover,
@@ -241,16 +236,13 @@ export default function Home() {
             sans-serif;
             scrollbar-width: thin;          /* "auto" or "thin" */
             scrollbar-color: blue orange;   /* scroll thumb and track */
-            
-              -webkit-touch-callout: none; /* iOS Safari */
-                -webkit-user-select: none; /* Safari */
-                 -khtml-user-select: none; /* Konqueror HTML */
-                   -moz-user-select: none; /* Old versions of Firefox */
-                    -ms-user-select: none; /* Internet Explorer/Edge */
-                        user-select: none; /* Non-prefixed version, currently
-                                              supported by Chrome, Edge, Opera and Firefox */
-            
-
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+             -khtml-user-select: none; /* Konqueror HTML */
+               -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                    user-select: none; /* Non-prefixed version, currently
+                                          supported by Chrome, Edge, Opera and Firefox */
             
         }
 
@@ -262,6 +254,7 @@ export default function Home() {
 
 
       `}</style>
+
     </div>
   )
 }

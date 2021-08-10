@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import NextNprogress from 'nextjs-progressbar';
+import BottomNav from '../components/BottomNav'
 import fetch from 'isomorphic-unfetch';
 import useSWR from 'swr';
 import cookie from 'js-cookie';
@@ -10,7 +11,10 @@ export default function Home() {
 
     
     <div className="container">
-
+<div>
+      Home
+      <BottomNav name='home' />
+    </div>
 <NextNprogress
   color="orange"
   startPosition={0.3}
